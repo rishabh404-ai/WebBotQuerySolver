@@ -13,7 +13,7 @@ def bot_search(request):
 
     
     try:
-        client = wolframalpha.Client("2RE24G-VWP677H2GT")
+        client = wolframalpha.Client("<-- Enter Your Wolframalpha API KEY -->")
         res = client.query(query)
         ans = next(res.results).text
         return render(request, 'webbot/index.htm', {'ans': ans, 'query': query})
